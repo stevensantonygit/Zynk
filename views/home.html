@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
+  <h1>Welcome, <span id="username">Loading...</span>!</h1>
+  <a href="/logout">Logout</a>
+
+  <script>
+    fetch('/api/user')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('username').textContent = data.username;
+      })
+      .catch(err => {
+        document.getElementById('username').textContent = 'Guest';
+      });
+  </script>
+</body>
+</html>

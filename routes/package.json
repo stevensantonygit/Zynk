@@ -1,0 +1,40 @@
+{
+  "name": "zynk",
+  "version": "1.0.0",
+  "description": "Social Media Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevensantonygit/Zynk.git"
+  },
+  "keywords": [
+    "social",
+    "media",
+    "web",
+    "platform",
+    "zynk",
+    "messaging",
+    "real-time",
+    "connect",
+    "thoughts",
+    "expressive",
+    "modern",
+    "unique"
+  ],
+  "author": "Stevens Antony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevensantonygit/Zynk/issues"
+  },
+  "homepage": "https://github.com/stevensantonygit/Zynk#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.16.0"
+  }
+}

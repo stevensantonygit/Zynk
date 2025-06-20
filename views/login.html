@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zynk – Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #0A0A0A;
+      font-family: 'Orbitron', sans-serif;
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    form {
+      background: #121212;
+      padding: 3rem 3.5rem;
+      border-radius: 12px;
+      box-shadow:
+        0 0 20px #00E5FF88,
+        inset 0 0 10px #5D00FF88;
+      width: 350px;
+      text-align: center;
+      position: relative;
+      overflow: visible;
+    }
+
+    form::before {
+      content: "ZYNK";
+      font-size: 5rem;
+      font-weight: 900;
+      color: #00E5FF;
+      position: absolute;
+      top: -90px;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: drop-shadow(0 0 6px #00E5FFaa);
+      animation: pulseGlow 3s ease-in-out infinite;
+      font-family: 'Orbitron', monospace;
+      letter-spacing: -8px;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        text-shadow:
+          0 0 8px #00E5FF,
+          0 0 20px #5D00FF,
+          0 0 30px #5D00FF,
+          0 0 40px #00E5FF;
+        color: #00E5FF;
+      }
+      50% {
+        text-shadow:
+          0 0 12px #5D00FF,
+          0 0 25px #00E5FF,
+          0 0 45px #00E5FF,
+          0 0 55px #5D00FF;
+        color: #5D00FF;
+      }
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-shadow: 0 0 6px #00E5FFaa;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 6px;
+      background: #1E1E1E;
+      color: #FFFFFF;
+      font-size: 1rem;
+      font-weight: 500;
+      box-shadow:
+        inset 0 0 6px #00E5FF88;
+      transition: box-shadow 0.3s ease;
+    }
+
+    input::placeholder {
+      color: #8888AA;
+      letter-spacing: 1px;
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow:
+        0 0 8px #5D00FF,
+        inset 0 0 10px #5D00FF;
+      background: #2A2A2A;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.9rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #00E5FF, #5D00FF);
+      color: #fff;
+      cursor: pointer;
+      box-shadow:
+        0 0 15px #00E5FF,
+        0 0 30px #5D00FF;
+      transition: background 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    button:hover {
+      background: linear-gradient(45deg, #5D00FF, #00E5FF);
+      box-shadow:
+        0 0 20px #5D00FF,
+        0 0 40px #00E5FF;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -20%;
+      left: -20%;
+      width: 140%;
+      height: 140%;
+      background:
+        radial-gradient(circle at 30% 30%, #00E5FF44, transparent 50%),
+        radial-gradient(circle at 70% 70%, #5D00FF44, transparent 50%);
+      animation: moveBackground 12s linear infinite;
+      z-index: 0;
+      filter: blur(60px);
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: 30% 30%, 70% 70%; }
+      50% { background-position: 35% 35%, 65% 65%; }
+      100% { background-position: 30% 30%, 70% 70%; }
+    }
+  </style>
+</head>
+<body>
+  <form action="/login" method="POST" autocomplete="off">
+    <h2>Zynk Login</h2>
+    <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+    <input type="password" name="password" placeholder="Password" required autocomplete="current-password" />
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>

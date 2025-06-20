@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+</head>
+<body>
+  <h1>Welcome, <span id="username"></span>!</h1>
+  <p>This is your dashboard.</p>
+  <a href="/logout">Logout</a>
+
+  <script>
+    const username = localStorage.getItem('username');
+    if (username) {
+      document.getElementById('username').textContent = username;
+    }
+  </script>
+</body>
+</html>
